@@ -10,5 +10,5 @@
 
 Сервис gateway выполняет запросы к сервису централизованного логирования (https://github.com/NemanCat/logging) и сервису отправки email (https://github.com/NemanCat/mailer).
 
-Документация по сервису gateway:  https://github.com/gateway/mailer/wiki
+Документация по сервису gateway:  https://github.com/gateway/wiki
 
