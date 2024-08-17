@@ -35,9 +35,9 @@ const (
 	//частота запуска чистильщика хранилища забаненных ip-адресов, минут
 	banned_store_cleaner_frequency = 5
 	//имя сессионного cookie
-	session_cookie_name = "orgdem-session"
+	session_cookie_name = "secured-portal-session"
 	//ключ для шифрования cookie
-	cookie_secret = "qJwDNFBxDNGmMMausJBvQ6Kn1oGPkZhB"
+	cookie_secret = "qJwDNFBpDNGmMMausPBvQ9Kn1oGPkZhB"
 )
 
 var (
