@@ -75,7 +75,7 @@ func (gs *GatewayService) UnknownLoginAttempt(ctx context.Context,
 			err = t.Execute(&doc, data)
 			if err == nil {
 				SendEmailMessage(admin_email, from, from_name,
-					"Инцидент безопасноcти на портале Оргдиагностика-ЭМ", doc.String())
+					"Инцидент безопасноcти на портале", doc.String())
 			}
 		}
 
