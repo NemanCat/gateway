@@ -1,0 +1,22 @@
+//grpc-интерфейс сервиса логирования
+
+syntax = "proto3";
+
+package logging;
+
+import "google/protobuf/empty.proto";
+
+option go_package = ".;pb";
+
+//структура сообщения сервису логирования
+message LoggingMessage {
+	//имя лога
+	string logname = 1;
+	//текст сообщения в лог
+	string message = 2;
+}
+
+service LoggingService {
+	//запись сообщения в лог
+	rpc WriteToLog(LoggingMessage) returns (google.protobuf.Empty);
+}

@@ -1,0 +1,28 @@
+//grpc-интерфейс сервиса рассылки почты
+
+syntax = "proto3";
+
+package orgdem.services.mailer;
+
+import "google/protobuf/empty.proto";
+
+option go_package = ".;pb";
+
+//структура сообщения сервису рассылки
+message MailerMessage {
+	//адрес получателя
+	string to = 1;
+	//адрес отправителя
+	string from = 2;
+	//имя отправителя
+	string fromname = 3;
+	//тема письма
+	string subject = 4;
+	//текст письма
+	string body = 5;
+}
+
+service MailerService {
+	//отправка письма
+	rpc SendMail(MailerMessage) returns (google.protobuf.Empty);
+}

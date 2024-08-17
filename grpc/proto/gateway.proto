@@ -1,0 +1,21 @@
+//grpc-интерфейс сервиса единой точки доступа
+
+syntax = "proto3";
+
+package gateway;
+
+import "google/protobuf/empty.proto";
+
+option go_package = ".;pb";
+
+//структура сообщения единой точке доступа об инциденте безопасности если требуется одно значение
+message StringSecurityMessage {
+	//передаваемый строковый параметр
+	string value = 1;
+}
+//-------------------------------------------------
+//экспонируемые методы сервиса
+service GatewayService {
+	//приём сообщения об инциденте безопасности - попытка аутентификации с несуществующим логином
+	rpc UnknownLoginAttempt(StringSecurityMessage) returns (google.protobuf.Empty);
+}
